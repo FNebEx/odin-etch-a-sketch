@@ -2,5 +2,4 @@
 The Etch-A-Sketch assignment from The Odin Project
 
 ### TODO
-- Add the UI buttons so the user can generate the grid and cells.
-- Figure out how to generate new cells without changing the size of the grid.
+- Make the project not look like crap

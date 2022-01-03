@@ -24,6 +24,11 @@ header, main, footer {
 
 header {
   height: 300px;
+  background-color: #071013;
+  color: #DFE0E2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -40,8 +45,8 @@ main {
 .eas-grid {
   border: 1px solid black;
   margin: auto;
-  /* width: 512px;
-  height: 5126px; */
+  width: 512px;
+  height: 512px;
   display: grid;
 }
 

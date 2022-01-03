@@ -1,21 +1,20 @@
 let grid = document.querySelector('.eas-grid');
-// let size = 25;
-let multipier = 1;
+let range = document.querySelector('input[type="range"]');
+let clear = document.querySelector('.clear');
 let color = '#6EA4BF'
+let value = 5;
 
 function generateGrid(size) {
-  grid.style.width = `${size * size}px`;
-  grid.style.height = `${size * size}px`;
-  grid.style.gridTemplateColumns = `repeat(${size/multipier}, 1fr)`;
+
+  grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-  for(let i = 0; i < size /multipier; i++) {
-    for(let j = 0; j < size ; j += multipier) {
+  for(let i = 0; i < size ; i++) {
+    for(let j = 0; j < size ; j ++) {
+
       let cell = document.createElement('div');
-      // cell.style.width =`${size * multipier}px`;
-      // cell.style.height =`${size * multipier}px`;
+
       cell.classList.add('cells');
-      
       cell.addEventListener('mouseenter', () => {
         cell.style.backgroundColor = color;
       });
@@ -29,6 +28,26 @@ function resetGrid() {
   grid.innerHTML = '';
 }
 
-generateGrid(25);
+function setValue(v) {
+  value = v;
+  generateGrid(value);
+}
+
+function clearGrid() {
+  resetGrid();
+}
+
+range.onchange = (e) => {
+  clearGrid();
+  // setValue(value)
+  generateGrid(e.target.value);
+}
+
+clear.onclick = () => {
+  clearGrid();
+  generateGrid(value);
+}
+
+generateGrid(value);
 
 
