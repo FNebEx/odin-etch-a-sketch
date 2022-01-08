@@ -2,4 +2,4 @@
 The Etch-A-Sketch assignment from The Odin Project
 
 ### TODO
-- Make the project not look like crap
+- Fix when user clicks reset, the grid resets to whatever the current range value is. Right now in some commented, it'll do that, but add a ton more cells. 

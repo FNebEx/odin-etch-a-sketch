@@ -39,7 +39,7 @@ function clearGrid() {
 
 range.onchange = (e) => {
   clearGrid();
-  // setValue(value)
+  // setValue(value);
   generateGrid(e.target.value);
 }
 
